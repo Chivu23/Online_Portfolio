@@ -22,17 +22,19 @@ def create_database(db_path=DB_FILE_PATH):
 
 
 def create_tables(connection):
-    create_insta_table(connection)
+    create_users_table(connection)
     create_git_table(connection)
     create_fb_table(connection)
 
 
-def create_insta_table(connection):
+def create_users_table(connection):
     cursor = connection.cursor()
     cursor.execute(
         """
-        CREATE TABLE IF NOT EXISTS Insta(
+        CREATE TABLE IF NOT EXISTS Users(
         id TEXT NOT NULL PRIMARY KEY,
+        username TEXT NOT NULL,
+        password TEXT NOT NULL,
         email TEXT NOT NULL
         );
         """
@@ -46,6 +48,8 @@ def create_git_table(connection):
         """
         CREATE TABLE IF NOT EXISTS Git(
         id TEXT NOT NULL PRIMARY KEY,
+        username TEXT NOT NULL,
+        password TEXT NOT NULL,
         email TEXT NOT NULL
         );
         """
@@ -59,6 +63,8 @@ def create_fb_table(connection):
         """
         CREATE TABLE IF NOT EXISTS FaceBook(
         id TEXT NOT NULL PRIMARY KEY,
+        username TEXT NOT NULL,
+        password TEXT NOT NULL,
         email TEXT NOT NULL
         );
         """
