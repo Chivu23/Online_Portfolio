@@ -1,14 +1,14 @@
 {% block carousel %}
-<div id="carouselExampleFade" class="carousel slide carousel-fade">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ url_for('static', filename='images/chivu_music.jpeg') }}" class="d-block w-60" alt="chivu_music">
+      <img src="{{ url_for('static', filename='images/chivu_music.jpeg') }}" class="d-block w-50" alt="chivu_music">
     </div>
     <div class="carousel-item">
-      <img src="{{ url_for('static', filename='images/music_chivu.jpeg') }}" class="d-block w-60" alt="music_chivu">
+      <img src="{{ url_for('static', filename='images/music_chivu.jpeg') }}" class="d-block w-50" alt="music_chivu">
     </div>
     <div class="carousel-item">
-      <img src="{{ url_for('static', filename='images/music_chivu_forever.jpeg') }}" class="d-block w-60" alt="music_chivu_forever">
+      <img src="{{ url_for('static', filename='images/music_chivu_forever.jpeg') }}" class="d-block w-50" alt="music_chivu_forever">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

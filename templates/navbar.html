@@ -11,6 +11,12 @@
         <a class="nav-link active" aria-current="page" href="/bio">Bio</a>
         <a class="nav-link" aria-current="page" href="/media">Media</a>
         <a class="nav-link" aria-current="page" href="/login">Contact/Login</a>
+        {% if user %}
+        <a class="nav-link" href="/"><i class="fa-solid fa-music fa-beat-fade"></i> {{ user }}</a>
+        <a class="nav-link" href="/logout">Logout</a>
+        {% else %}
+        <a class="nav-link" href="/login"><i class="fa-solid fa-music fa-beat-fade"></i></a>
+        {% endif %}
         <a class="nav-link" href="#"><i class="fa-solid fa-music fa-beat-fade"></i></a>
       </div>
     </div>

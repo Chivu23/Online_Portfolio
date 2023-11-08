@@ -5,13 +5,13 @@
         <h2> Login </h2>
         <form class="col-7" action="/login" method="post" name="login" id="login">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="password">
   </div>
   {% if error %}
             <div class="alert alert-danger my-4" role="alert">
@@ -23,6 +23,8 @@
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+  <p class="spaced-top-2"> No cont?! No problem!! <a href="/users/add" target="_blank"> Start Here </a></p>
 </form>
     </div>
+</div>
 {% endblock %}
