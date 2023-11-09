@@ -7,12 +7,175 @@
 }
 
 .heading-title {
-    color: #E3DDD2;
-    font-size: 88px;
-    font-weight: 700;
-    text-transform: none;
-    font-style: normal;
-    text-decoration: none;
+    color: #a6283d;
+    font-size: 45px;
+    font-weight: 750;
+    text-transform: uppercase;
+    font-style: italian;
+    line-height: 1.5em;
+    text-decoration: underline;
+    text-shadow: 1px 2px #1c0a0d;
+    padding-left: 650px;
+}
+
+.spaced-top-5{
+   margin-top: 0.5em;
+}
+.spaced-top-1 {
+    background-color: #EF2356;
+    padding: 10px 40px;
+    border-radius: 20px;
+}
+
+.navbar-brand brand-logo {
+    font-size: 5em;
+    font_weight: bold;
+    padding: 10px 40px;
     line-height: 1em;
     letter-spacing: -4px;
+    line-height: 1em;
+    font-family: comic;
+}
+.navbar-collapse {
+    font-size: 2em;
+    padding: 25px 120px;
+}
+
+.btn-custom-joy {
+  background-color: #822739; /* Burgundy */
+  border: none;
+  color: white;
+  padding: 2px;
+  text-align: center;
+  font-style: oblique;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer
+  transition: width 2s;
+  transition-timing-function: linear;
+}
+.btn-custom-joy:hover {
+    background-color: #00fcd7;
+    color: #000000;
+    border: 2px solid #555555;
+    border-style: rounded;
+    transition: width 2s;
+    transition-timing-function: linear;
+}
+
+.btn-custom-enjoy {
+  background-color: #a12323; /* non-color */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btn-custom-enjoy:hover {
+    background-color: #FFFFFF;
+    color: #EF4056;
+    border: 2px solid #555555;
+    text-decoration: italian;
+}
+
+.card-img-top {
+    border: 9px solid #ddd;
+    border-radius: 19px;
+    padding: 8px;
+    width: 550px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box=size: border-box;
+}
+
+footer{
+    background-color: #123
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration:none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    color: #540909;
+    transition: 0.8s;
+}
+
+.footerNav{
+    margin: 30px 0;
+}
+
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.7em;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color:#454242
+}
+
+.footerBottom p{
+    color: #540909;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5 px;
+}
+
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%
+        text-align: center;
+        margin: 10px;
+    }
 }

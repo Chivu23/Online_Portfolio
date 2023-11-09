@@ -1,9 +1,9 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, url_for
 
 from db.db_connection import create_database
 from models.user import User
 
-app = Flask(__name__)
+app = Flask(__name__)      # define app
 
 app.secret_key = b'_5#y2L"F4Q8z\n\xec)'
 
@@ -49,6 +49,10 @@ def login():
 # def get_user_by_id():
 #     pass
 
+@app.route("/bio", methods=['GET'])
+def bio():
+    return render_template("bio.html")
+
 
 @app.route("/users/add", methods=["GET", "POST"])
 def add_user():
@@ -73,18 +77,13 @@ def delete_user(user_id):
     pass
 
 
-@app.route('/home', methods=['GET'])
-def get_home_page():
-    return render_template('/bio.html')
-
-
-# @app.route('/home', methods=['GET'])
-# def test():
-#     render_template('/demo.html')
+# @app.route('/demo', methods=['GET'])
+# def demo():
+#     render_template('demo.html')
 
 
 if __name__ == '__main__':
     create_database()
-    app.run(debug=True, port=7001)
+    app.run(debug=True, port=7000)
 
 
