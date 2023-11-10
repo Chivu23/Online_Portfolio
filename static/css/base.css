@@ -1,6 +1,6 @@
 .brand-logo {
     color: #822739;
-    font-size: 3.9em;
+    font-size: 4.9em;
     font_weight: bold;
     font_style: oblique;
     font-family: Arial, Helvetica, sans-serif;
@@ -15,20 +15,30 @@
     line-height: 1.5em;
     text-decoration: underline;
     text-shadow: 1px 2px #1c0a0d;
-    padding-left: 650px;
 }
+.spaced-top-2{
+  background-color: #white; /* Burgundy */
+  color: black;
+  padding: 2px;
+  margin-top: 15px;
+  border-radius: 20px;
 
+}
 .spaced-top-5{
-   margin-top: 0.5em;
+   margin-top: 0.1em;
+   margin-bottom: 2em;
 }
 .spaced-top-1 {
     background-color: #EF2356;
     padding: 10px 40px;
     border-radius: 20px;
 }
+.btn-primary{
+    background-color: #454242;
+}
 
 .navbar-brand brand-logo {
-    font-size: 5em;
+    font-size: 2em;
     font_weight: bold;
     padding: 10px 40px;
     line-height: 1em;
@@ -38,12 +48,13 @@
 }
 .navbar-collapse {
     font-size: 2em;
-    padding: 25px 120px;
+    padding: 20px 50px;
 }
 
 .carousel-inner{
-    padding: 5px;
+    padding: 20px;
     margin-Bottom: 10px;
+
 }
 
 .btn-custom-joy {
@@ -61,7 +72,7 @@
   transition-timing-function: linear;
 }
 .btn-custom-joy:hover {
-    background-color: #00fcd7;
+    background-color: white;
     color: #000000;
     border: 2px solid #555555;
     border-style: rounded;
@@ -85,7 +96,7 @@
 
 .btn-custom-enjoy:hover {
     background-color: #FFFFFF;
-    color: #EF4056;
+    color: black;
     border: 2px solid #555555;
     text-decoration: italian;
 }
@@ -97,19 +108,14 @@
     width: 550px;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box=size: border-box;
-}
-
 footer{
-    background-color: #123
+    background-color: #771500
+
 }
 
 .footerContainer {
     width: 100%;
-    padding: 70px 30px 20px;
+    padding: 30px 5px 22px;
 }
 .socialIcons{
     display: flex;
@@ -126,7 +132,7 @@ footer{
 
 .socialIcons a i{
     font-size: 2em;
-    color: black;
+    color: #454545;
     opacity: 0.9;
 }
 
@@ -165,7 +171,7 @@ footer{
 .footerBottom p{
     color: white;
 }
-
+/*
 .designer{
     opacity: 0.7;
     text-transform: uppercase;
@@ -174,7 +180,12 @@ footer{
     text-align: center;
     margin: 0px 5px;
 }
+*{
+    padding: 7;
+    margin: 7;
+    box=size: border-box;
 
+*/
 @media (max-width: 700px){
     .footerNav ul{
         flex-direction: column;
