@@ -54,6 +54,16 @@ def bio():
     return render_template("bio.html")
 
 
+@app.route("/media", methods=['GET'])
+def media():
+    return render_template("media.html")
+
+
+@app.route("/sport", methods=['GET'])
+def sport():
+    return render_template("sport.html")
+
+
 @app.route("/users/add", methods=["GET", "POST"])
 def add_user():
     if request.method == "GET":

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="navbar bg-body-tertiary">
+  <form class="container-fluid justify-content-start">
+    <div>
+      <button class="btn btn-outline-success me-2" type="button">Colors</button>
+      <button class="btn btn-outline-success me-2" type="button">Snow</button>
+      <button class="btn btn-outline-success me-2" type="button">Bike</button>
+      <a href="/sport"><button class="btn btn-outline-success me-2" type="button">Relax</button></a>
+    </div>
+  </form>
+  <img src="{{ url_for('static', filename='images/cannon.jpeg') }}" class="cannon">
+</nav>
+{% endblock %}
+
+
