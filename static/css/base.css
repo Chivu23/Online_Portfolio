@@ -41,6 +41,11 @@
     padding: 25px 120px;
 }
 
+.carousel-inner{
+    padding: 5px;
+    margin-Bottom: 10px;
+}
+
 .btn-custom-joy {
   background-color: #822739; /* Burgundy */
   border: none;
