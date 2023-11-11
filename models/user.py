@@ -11,14 +11,12 @@ class User:
             password,
             user_id=None,
             username=None,
-            confirm_password=None
-    ):
+            confirm_password=None):
         self.user_id = user_id
         self.username = username
         self.email = email
         self.password = password
         self.confirm_password = confirm_password
-
         self.user_db = UsersDb()
 
     def validate_create(self):
@@ -42,6 +40,10 @@ class User:
     def _validate_password(self):
         if len(self.password) < 8:
             raise Exception("more words to password")
+
+    def _check_password(self):
+        if self.password != self.confirm_password:
+            raise Exception("Sorry! The pass not match! Try again.")
 
     def add(self):
         self.validate_create()

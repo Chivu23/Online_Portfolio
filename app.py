@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from db.db_connection import create_database
 from models.user import User
 
-app = Flask(__name__)      # define app
+app = Flask(__name__)      # define app --> entry point is the current file
 
 app.secret_key = b'_5#y2L"F4Q8z\n\xec)'
 
@@ -59,9 +59,24 @@ def media():
     return render_template("media.html")
 
 
+@app.route("/colors", methods=['GET'])
+def colors():
+    return render_template("colors.html")
+
+
 @app.route("/sport", methods=['GET'])
 def sport():
     return render_template("sport.html")
+
+
+@app.route("/bike", methods=['GET'])
+def bike():
+    return render_template("bike.html")
+
+
+@app.route("/snow", methods=['GET'])
+def snow():
+    return render_template("snow.html")
 
 
 @app.route("/users/add", methods=["GET", "POST"])
@@ -92,7 +107,7 @@ def delete_user(user_id):
 #     render_template('demo.html')
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':           # use this file entrypoint
     create_database()
     app.run(debug=True, port=7000)
 
