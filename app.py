@@ -8,7 +8,7 @@ app = Flask(__name__)      # define app --> entry point is the current file
 app.secret_key = b'_5#y2L"F4Q8z\n\xec)'
 
 
-@app.route('/', methods=["GET"])    # renderizare template
+@app.route('/', methods=["GET"])    # render template
 def home():
     return render_template("home.html", user=session.get("user", False))
 
