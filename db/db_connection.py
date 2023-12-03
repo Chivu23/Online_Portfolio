@@ -23,8 +23,8 @@ def create_database(db_path=DB_FILE_PATH):
 
 def create_tables(connection):
     create_users_table(connection)
-    create_git_table(connection)
-    create_fb_table(connection)
+    # create_git_table(connection)
+    # create_fb_table(connection)
 
 
 def create_users_table(connection):
@@ -41,33 +41,33 @@ def create_users_table(connection):
     )
     connection.commit()
 
-
-def create_git_table(connection):
-    cursor = connection.cursor()
-    cursor.execute(
-        """
-        CREATE TABLE IF NOT EXISTS Git(
-        id TEXT NOT NULL PRIMARY KEY,
-        username TEXT NOT NULL,
-        password TEXT NOT NULL,
-        email TEXT NOT NULL
-        );
-        """
-    )
-    connection.commit()
-
-
-def create_fb_table(connection):
-    cursor = connection.cursor()
-    cursor.execute(
-        """
-        CREATE TABLE IF NOT EXISTS FaceBook(
-        id TEXT NOT NULL PRIMARY KEY,
-        username TEXT NOT NULL,
-        password TEXT NOT NULL,
-        email TEXT NOT NULL
-        );
-        """
-    )
-    connection.commit()
+#
+# def create_git_table(connection):
+#     cursor = connection.cursor()
+#     cursor.execute(
+#         """
+#         CREATE TABLE IF NOT EXISTS Git(
+#         id TEXT NOT NULL PRIMARY KEY,
+#         username TEXT NOT NULL,
+#         password TEXT NOT NULL,
+#         email TEXT NOT NULL
+#         );
+#         """
+#     )
+#     connection.commit()
+#
+#
+# def create_fb_table(connection):
+#     cursor = connection.cursor()
+#     cursor.execute(
+#         """
+#         CREATE TABLE IF NOT EXISTS FaceBook(
+#         id TEXT NOT NULL PRIMARY KEY,
+#         username TEXT NOT NULL,
+#         password TEXT NOT NULL,
+#         email TEXT NOT NULL
+#         );
+#         """
+#     )
+#     connection.commit()
 
