@@ -59,10 +59,10 @@ class User:
     def check_in_db(self):
         users = self.user_db.read(email=self.email)
         if not users:
-            raise Exception("This user, my frined, is not found with this email")
+            raise Exception("This user, my friend, is not found with this email")
         user = users[0]
         if user["password"] == self.password:
-            raise Exception("Opaaaa! invalid pass")
+            raise Exception("Opa! invalid pass")
         return True
 
     def _to_dict_create(self):

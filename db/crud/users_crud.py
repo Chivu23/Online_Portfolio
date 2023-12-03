@@ -1,3 +1,7 @@
+"""
+BD CRUD methods for Users table
+"""
+
 from db.crud.interface_crud import CrudABC
 
 

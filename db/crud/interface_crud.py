@@ -1,3 +1,7 @@
+"""
+Abstract class with DB CRUD abstract methods
+"""
+
 from abc import ABC, abstractmethod
 
 from db.db_connection import get_db_connection
