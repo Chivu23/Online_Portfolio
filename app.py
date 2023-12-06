@@ -13,42 +13,6 @@ def home():
     return render_template("home.html", user=session.get("user", False))
 
 
-@app.route('/login', methods=["GET", "POST"])
-def login():
-    if request.method == "GET":                  # check method
-        return render_template("login.html")     # next steps logic of POST method
-    user_data = dict(request.form)   # => dictionary with info, from form
-
-    # {"email": "client@gmail.com", "password":"123"}
-    # user_obj = User(email=user_data["email"], password=user_data["password"])
-
-    try:                            # User(email="client@gmail.com", password="123")
-        user_obj = User(**user_data)
-        user_obj.check_in_db()
-        session["user"] = user_obj.email
-    except Exception as e:
-        return render_template("login.html", error=f"{e}")
-    # print(user_data)
-    # logic processing of a date comes from form
-    # interactive with business layer with users class
-    return redirect('/bio.html')
-
-
-# @app.route("/logout", method=['GET'])
-# def logout():
-#     session.pop("user", None)
-#     return redirect('/')
-
-
-# @app.route("/users", method=['GET'])
-# def get_all_users():
-#     pass
-
-
-# @app.route("/users/<user_id>", method=['GET'])
-# def get_user_by_id():
-#     pass
-
 @app.route("/bio", methods=['GET'])
 def bio():
     return render_template("bio.html")
@@ -77,6 +41,43 @@ def bike():
 @app.route("/snow", methods=['GET'])
 def snow():
     return render_template("snow.html")
+
+
+@app.route('/login', methods=["GET", "POST"])
+def login():
+    if request.method == "GET":                  # check method
+        return render_template("login.html")     # next steps logic of POST method
+    user_data = dict(request.form)   # => dictionary with info, from form
+    # {"email": "chivu@gmail.com", "password":"123ABCabc"}
+    # print("++++++++")
+    # print(user_data)
+    try:                            # User(email="chivu@gmail.com", password="123ABCabc")
+        user_obj = User(**user_data)
+        # <=> # # user_obj = User(email=user_data["email"], password=user_data["password"])
+        user_obj.check_in_db()
+        session["user"] = user_obj.email
+    except Exception as e:
+        return render_template("login.html", error=f"{e}")
+    # print(user_data)
+    # logic processing of a date comes from form
+    # interactive with business layer with users class
+    return redirect('/bio.html')
+
+
+# @app.route("/logout", method=['GET'])
+# def logout():
+#     session.pop("user", None)
+#     return redirect('/')
+
+
+# @app.route("/users", method=['GET',])
+# def get_all_users():
+#     pass
+
+
+# @app.route("/users/<user_id>", method=['GET'])
+# def get_user_by_id():
+#     pass
 
 
 @app.route("/users/add", methods=["GET", "POST"])

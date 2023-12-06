@@ -61,14 +61,14 @@ class User:
         if not users:
             raise Exception("This user, my friend, is not found with this email")
         user = users[0]
-        if user["password"] == self.password:
-            raise Exception("Opa! invalid pass")
+        if user["password"] != self.password:
+            raise Exception("Ooops! Invalid pass")
         return True
 
     def _to_dict_create(self):
         return {
             'id': str(uuid.uuid4()),
-            'user': self.username,
+            'username': self.username,
             'password': self.password,
             'email': self.email
         }

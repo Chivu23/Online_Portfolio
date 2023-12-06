@@ -9,7 +9,7 @@ class UsersDb(CrudABC):
 
     def create(self, entry_to_create):
         SQL_QUERY = """
-        INSERT INTO User(id, username, password, email)
+        INSERT INTO Users(id, username, password, email)
         VALUES (:id, :username, :password, :email);
         """
         cursor = self.connection.cursor()
@@ -54,7 +54,8 @@ class UsersDb(CrudABC):
 
     def update(self, entry_for_update):
         SQL_QUERY = """
-        UPDATE Users SET id=:id, username=:username, password=:password, email=:email, is_logged=:is_logged WHERE id=:id
+        UPDATE Users SET id=:id, username=:username, password=:password, 
+        email=:email, is_logged=:is_logged WHERE id=:id;
         """
         cursor = self.connection.cursor()
         cursor.execute(SQL_QUERY, entry_for_update.__dict__)
