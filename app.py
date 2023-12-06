@@ -61,7 +61,7 @@ def login():
     # print(user_data)
     # logic processing of a date comes from form
     # interactive with business layer with users class
-    return redirect('/bio.html')
+    return redirect('/bio')
 
 
 # @app.route("/logout", method=['GET'])

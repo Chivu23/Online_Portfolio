@@ -20,7 +20,7 @@ class UsersDb(CrudABC):
         self.connection.commit()
 
     def read(self, username=None, email=None, id=None):
-        sql_query = "SELECT * FROM Users"
+        sql_query = "SELECT * FROM Users "
         value = ''
         if id:
             sql_query += "WHERE id=?;"
@@ -29,7 +29,7 @@ class UsersDb(CrudABC):
             sql_query += "WHERE username=?;"
             value = username
         elif email:
-            sql_query += "WHERE mail=?;"
+            sql_query += "WHERE email=?;"
             value = email
         cursor = self.connection.cursor()
         if not value:
