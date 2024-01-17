@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <div>
-<a href="https://www.youtube.com/watch?v=mmWr0rXeeh8&list=PL1bL77gOePuKImQQDM-Qpv9JWaqDORJvU&index=3">
-    <button class="btn-custom-enjoy"> LISTEN ! to enJOY!</button>
+<a href="https://www.youtube.com/watch?v=mmWr0rXeeh8&list=PL1bL77gOePuKImQQDM-Qpv9JWaqDORJvU&index=3" target="_blank">
+    <button class="btn-custom-enjoy"> LISTEN ! to enJOY! (another youtube playlist)</button>
 </a>
 </div>
 <div class="container-fluid">
@@ -23,12 +23,8 @@
                 {{ error }}
             </div>
      {% endif %}
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-  <p class="spaced-top-2"> No cont?! No problem!! <a href="/users/add" target="_blank"> Start Here </a></p>
+  <p class="spaced-top-2"> No account?! No problem!! <a href="/users/add" target="_blank"> Start Here </a></p>
 </form>
     </div>
 </div>

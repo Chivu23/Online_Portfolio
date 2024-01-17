@@ -110,6 +110,6 @@ def delete_user(user_id):
 
 if __name__ == '__main__':           # use this file entrypoint
     create_database()
-    app.run(debug=True, port=7000)
+    app.run(port=7000)
 
 
